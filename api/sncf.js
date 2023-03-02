@@ -6,7 +6,8 @@ async function fetchVehicleJourneysWithDisruptions() {
 
     const time = getSinceDate()
 
-    return await axios.get(`https://api.sncf.com/v1/coverage/sncf/lines/line%3ASNCF%3AFR%3ALine%3A%3A666769D0-F105-4734-9587-1D966650724A%3A/vehicle_journeys?count=50&since=${time}`, {
+    //Replace ##LINE## with the line id
+    return await axios.get(`https://api.sncf.com/v1/coverage/sncf/lines/##LINE##/vehicle_journeys?count=50&since=${time}`, {
         auth: {
             username: sncf_token,
             password: ''
