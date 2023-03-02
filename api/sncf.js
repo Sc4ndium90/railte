@@ -1,5 +1,5 @@
-const {getSinceDate} = require("./time");
-const {sncf_token} = require("./config.json")
+const {getSinceDate} = require("../utils/date");
+const {sncf_token} = require("../config.json")
 const axios = require("axios");
 
 async function fetchVehicleJourneysWithDisruptions() {
